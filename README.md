@@ -9,7 +9,7 @@ Exchange Cache提供基于内存的缓存功能，主要用于缓存一些使用
 ExCache的LRU Cache在传统的LRU Cache基础上增加了使用次数和有效期的限制，可以在初始化时设置。
 
 **创建一个LRUCache**
-`func NewLRUCache(size int, uctl int, ttl time.Duration) *LRUCache`
+> `func NewLRUCache(size int, uctl int, ttl time.Duration) *LRUCache`
 
 - size: Cache中能存放的最大记录量
 - uctl(Used-Count-To-Live): 每条记录最多可被使用的次数，如果为0表示不限制使用次数
@@ -98,7 +98,7 @@ Close会关闭备份文件的句柄，保证数据不会因为写到一半被损
 
 ## 测试
 
-如何执行自动化测试？
+`go test -v -run xxx` 执行test case 
 
 ## 如何贡献
 
@@ -106,4 +106,4 @@ Close会关闭备份文件的句柄，保证数据不会因为写到一半被损
 
 ## 讨论
 
-QQ讨论群：XXXX
+QQ讨论：xxx
