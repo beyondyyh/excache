@@ -9,6 +9,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+// run: go test -v -run TestLRUCache
 func TestLRUCache(t *testing.T) {
 	var ok bool
 	// Test wrong params
@@ -86,6 +87,7 @@ func TestLRUCache(t *testing.T) {
 	cache.Purge()
 }
 
+// run: go test -bench BenchmarkLRUCache
 func BenchmarkLRUCache(b *testing.B) {
 	cache := NewLRUCache(2000, 1, 1*time.Second)
 	var wg sync.WaitGroup

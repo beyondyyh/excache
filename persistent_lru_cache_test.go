@@ -10,6 +10,7 @@ import (
 
 var testdb = "./test.db"
 
+// run: go test -v -run TestMain
 func TestMain(m *testing.M) {
 	delTestFile()
 	defer delTestFile()
@@ -21,6 +22,7 @@ func delTestFile() {
 	os.RemoveAll(testdb)
 }
 
+// run: go test -v -run TestPersistentLRUCache
 func TestPersistentLRUCache(t *testing.T) {
 	cache, err := NewPersistentLRUCache(testdb, 3, 3, 1, 1*time.Second)
 	assert.NoError(t, err)
