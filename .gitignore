@@ -1,0 +1,5 @@
+.tmp
+.download
+output
+.*.sw*
+vendor
